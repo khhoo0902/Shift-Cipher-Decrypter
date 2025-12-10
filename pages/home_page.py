@@ -15,7 +15,7 @@ with right:
 
 st.divider()
 st.markdown("""
-            * Please note that the *:red-background[results are reserved]* because the algorithm must not be 100% accurate.
+            * Please note that the *:red-background[decryption results are reserved]* because the algorithm must not be 100% accurate.
 
-            * If you don't know what Shift Cipher encryption is, you can read about it in this [Wikipedia page](https://en.wikipedia.org/wiki/Caesar_cipher).
+            * If you don't know what Shift Cipher encryption is, you can find more about it in this [Wikipedia Page](https://en.wikipedia.org/wiki/Caesar_cipher).
             """)
