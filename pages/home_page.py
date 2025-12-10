@@ -7,7 +7,7 @@ st.subheader("This web app is designed to decrypt messages that are encrypted wi
 
 st.space("large")
 st.header("Would you like to...", anchor=False)
-left, right = st.columns(2, gap=None, border=False)
+left, right = st.columns(2, gap="small", border=False)
 with left:
     st.page_link(page="pages/encryptor_page.py", label="**:blue-background[Try encryption at the encrypter page]**", width="content")
 with right:
@@ -20,3 +20,4 @@ st.markdown("""
             * If you don't know what Shift Cipher encryption is, you can read about it in this [Wikipedia page](https://en.wikipedia.org/wiki/Caesar_cipher).
 
             """)
+
