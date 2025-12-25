@@ -8,7 +8,7 @@ st.title("Decrypter :material/lock_open_right:", anchor=False)
 #Page init
 METHODS = ("Shift Guessing", "Keywords Matching", "Manually Selecting")
 LETTERCASES = ("Uppercase", "Lowercase", "Adaptive")
-KEYWORDS = ("an", "is", "it", "in", "on", "at", "as", "by", "to", "of", "for", "form", "the", "and")
+KEYWORDS = ("an", "am", "is", "it", "in", "on", "at", "as", "by", "to", "of", "for", "the", "and", "from")
 if "decrypter_method" not in st.session_state:
     st.session_state.decrypter_method = "Keywords Matching"
 if "decrypter_encrypted_text" not in st.session_state:
@@ -157,3 +157,4 @@ if st.session_state.decrypter_confirmed_input:
                 if st.button("✅ Correct", use_container_width=True):
                     st.session_state.decrypter_result_confirmed = True
                     st.rerun()
+
