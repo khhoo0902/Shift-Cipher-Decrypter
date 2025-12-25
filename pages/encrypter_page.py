@@ -1,9 +1,13 @@
 import streamlit as st
 from random import randint
 import encrypter
+from time import sleep
 
 st.set_page_config(page_title="Encrypter")
 st.title("Encrypter :material/lock:", anchor=False)
+
+for _ in range(100):
+    sleep(.002)
 
 #Page init
 lettercases = ("Uppercase", "Lowercase", "Adaptive")
@@ -76,4 +80,5 @@ if st.session_state.encrypter_encrypted_text != "":
     st.write(f"**Encrypted Text :blue-background[Shift = {st.session_state.encrypter_shift}]**")
     st.code(st.session_state.encrypter_encrypted_text, language=None, wrap_lines=True, height="content")
     with st.container(horizontal_alignment="right"):
+
         st.download_button("Download", icon=":material/download:", data=st.session_state.encrypter_encrypted_text, file_name=f"encrypted_text.txt")
