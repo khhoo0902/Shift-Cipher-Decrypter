@@ -6,8 +6,7 @@ from time import sleep
 st.set_page_config(page_title="Encrypter")
 st.title("Encrypter :material/lock:", anchor=False)
 
-for _ in range(100):
-    sleep(.002)
+sleep(0.2)
 
 #Page init
 lettercases = ("Uppercase", "Lowercase", "Adaptive")
@@ -82,3 +81,4 @@ if st.session_state.encrypter_encrypted_text != "":
     with st.container(horizontal_alignment="right"):
 
         st.download_button("Download", icon=":material/download:", data=st.session_state.encrypter_encrypted_text, file_name=f"encrypted_text.txt")
+
