@@ -37,8 +37,8 @@ FIRST_LETTER_ARR = ['T', 'A', 'W', 'F', 'Z']
 def calculateConfidence(letterArr, firstLetterArr):
     index1 = [letterArr.index(letter) for letter in LETTER_ARR]
     index2 = [firstLetterArr.index(letter) for letter in FIRST_LETTER_ARR]
-    passed = [index1[i + 1] <= index1[i + 2]for i in range(len(index1) - 2)] + [index2[i] <= index2[i + 1]for i in range(len(index2) - 1)]
-    return passed.count(True) / (len(LETTER_ARR + FIRST_LETTER_ARR) - 3) * 100
+    passedCases = [index1[i + 1] <= index1[i + 2]for i in range(len(index1) - 2)] + [index2[i] <= index2[i + 1]for i in range(len(index2) - 1)]
+    return passedCases.count(True) / (len(LETTER_ARR + FIRST_LETTER_ARR) - 3) * 100
 
 def guessShift(text, lettercase):
     chars = list(text.upper())
